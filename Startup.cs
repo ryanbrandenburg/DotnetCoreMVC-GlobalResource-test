@@ -83,7 +83,7 @@ namespace mvctest
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-          //  app.UseCookiePolicy();
+            app.UseCookiePolicy();
             app.UseRequestLocalization();
             app.UseSession();
 
