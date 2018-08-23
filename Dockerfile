@@ -5,7 +5,7 @@
  RUN  dotnet publish  -c Release -o Publish 
 
  FROM microsoft/dotnet:2.1.3-aspnetcore-runtime as execImage
- Arg arg
+ ARG arg
  ENV ASPNETCORE_ENVIRONMENT=${arg}
  COPY --from=publishImage /app/Publish/. .
  ENTRYPOINT ["dotnet", "mvctest.dll"]
