@@ -5,25 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
- <ItemGroup>
-    <Compile Update="App_GlobalResources\Resource.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="App_GlobalResources\Resource.en-us.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="App_GlobalResources\Resource.zh-cn.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="App_GlobalResources\Resource.zh-tw.resx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1"/>
   </ItemGroup>
 </Project>

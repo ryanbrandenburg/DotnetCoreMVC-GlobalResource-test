@@ -3,10 +3,10 @@
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Options
+@using Microsoft.Extensions.Localization
 
-@inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
-@inject IHtmlLocalizer<Resource> HtmlLocalizer
+@inject IStringLocalizer<Resource> Localizer
 
 
 @{
@@ -17,7 +17,7 @@
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 
-<div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+<div title="Request culture provider: @requestCulture?.Provider?.GetType().Name">
     <form id="selectLanguage" asp-controller="Home" 
           asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" 
           method="post" class="form-horizontal" role="form">
@@ -25,6 +25,6 @@
           onchange="this.form.submit();"
           asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
         </select>
-         <p>@requestCulture.RequestCulture.UICulture.Name- @HtmlLocalizer["TypeCode"]</p>
+         <p>@requestCulture.RequestCulture.UICulture.Name- @Localizer["TypeCode"]</p>
     </form>
 </div>

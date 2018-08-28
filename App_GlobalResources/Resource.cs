@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace mvctest
 {
-    public partial class Resource
+    public class Resource
     {
     }
 }

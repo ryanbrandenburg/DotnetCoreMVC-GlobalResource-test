@@ -14,6 +14,12 @@ namespace mvctest
     {
         public static void Main(string[] args)
         {
+            var cultures = System.Globalization.CultureInfo.GetCultures();
+            foreach (var culture in cultures)
+            {
+                Console.WriteLine(culture.Name)
+            }
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
