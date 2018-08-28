@@ -8,5 +8,4 @@ FROM microsoft/dotnet:2.1.3-aspnetcore-runtime as execImage
 ARG arg
 ENV ASPNETCORE_ENVIRONMENT=${arg}
 COPY --from=publishImage /app/Publish/. .
-RUN locale -a
 ENTRYPOINT ["dotnet", "mvctest.dll"]

@@ -37,8 +37,8 @@ namespace mvctest
                     var supportedCultures = new List<CultureInfo>
                     {
                                     new CultureInfo("en-US"),
-                                    new CultureInfo("zh-TW"),
-                                    new CultureInfo("zh-CN")
+                                    new CultureInfo("zh-Hant-TW"),
+                                    new CultureInfo("zh-Hans-CN")
                     };
                     opts.SupportedCultures = supportedCultures;
                     opts.SupportedUICultures = supportedCultures;
